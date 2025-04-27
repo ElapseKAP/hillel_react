@@ -1,12 +1,9 @@
-import Table from "./components/table/Table";
-import animalGroups from "./data/animal-groups";
+import List from './components/List/List.jsx';
 
 
 function App() {
 
-  return <>
-    <Table title="Animal groups" data={ animalGroups } />
-  </>
+  return <List />
 }
 
 export default App;
