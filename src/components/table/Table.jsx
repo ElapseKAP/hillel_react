@@ -6,7 +6,7 @@ function Table( { title, data } ) {
 		{ title && <caption>{ title }</caption> }
 
 		<tbody>
-			{ data.map( ( row, rowNum ) => <TableRow data={ row } key={ row.id } /> ) }
+			{ data.map( ( row ) => <TableRow data={ row } key={ row.id } /> ) }
 		</tbody>
 	</table>
 }
