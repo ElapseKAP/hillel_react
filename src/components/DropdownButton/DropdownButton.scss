@@ -1,0 +1,30 @@
+$action-delete: #dc3545;
+$action-delete-hover: #c82333;
+$action-delete-hover-bg: #C8233332;
+$action-update: #ffc107;
+$action-update-hover: #e0a800;
+$action-update-hover-bg: #E0A80032;
+
+.action-delete,
+.action-update {
+	font-weight: 600;
+}
+
+
+.action-delete {
+	color: $action-delete;
+
+	&:hover {
+		color: $action-delete-hover;
+		background-color: $action-delete-hover-bg;
+	}
+}
+
+.action-update {
+	color: $action-update;
+
+	&:hover {
+		color: $action-update-hover;
+		background-color: $action-update-hover-bg;
+	}
+}
