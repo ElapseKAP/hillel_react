@@ -1,12 +1,6 @@
-import Table from "./components/table/Table";
-import animalGroups from "./data/animal-groups";
-
-
 function App() {
 
-  return <>
-    <Table title="Animal groups" data={ animalGroups } />
-  </>
+  return <h1>App Component</h1>
 }
 
 export default App;
