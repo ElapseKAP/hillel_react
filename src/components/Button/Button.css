@@ -1,0 +1,13 @@
+.btn {
+	background-color: #F50022;
+	border: 1px solid #F50022;
+	border-radius: 4px;
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 10px 15px;
+}
+
+.btn:active {
+	box-shadow: 0 0 15px #F50022;
+}

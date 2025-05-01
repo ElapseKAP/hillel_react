@@ -65,6 +65,30 @@ function UsersList() {
 		updateUserField( userId, value, 'name' );
 	}
 
+	async function handleDeleteBtn( userId ) {
+
+		try {
+			const fetchParams = {
+				method: 'delete',
+				headers: {'Content-Type': 'application/json'}
+			}
+			const response = await fetch(
+				API_URI + `/${userId}`,
+				fetchParams
+			);
+
+			if ( ! response.ok ) {
+				throw new Error( `HTTP error, status: ${response.status}` );
+			}
+
+			// Update Users after deleting user
+			getUsers();
+		}
+		catch(error) {
+			printMessageConsole( `Error during user deleting (user id: ${userId}): ${error}`, 'error' );
+		}
+	}
+
 
 	useEffect( () => {
 		getUsers();
@@ -72,7 +96,7 @@ function UsersList() {
 
 
 	return users ?
-		users.map( userItem => <UserItem key={userItem.id} data={userItem} onChangeField={handleChangeField} onBlurName={handleNameBlur} /> )
+		users.map( userItem => <UserItem key={userItem.id} data={userItem} onChangeField={handleChangeField} onBlurName={handleNameBlur} onDeleteAction={handleDeleteBtn} /> )
 		: <h2>Sorry, no Users found</h2>
 }
 

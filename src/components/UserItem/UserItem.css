@@ -15,12 +15,13 @@
 	padding-top: 10px;
 }
 
-.grouped-field div {
+.grouped-field .user-name {
+	margin-right: min(5%, 40px);
 	width: 30%;
 }
 
-.grouped-field .user-name {
-	margin-right: min(5%, 40px);
+.grouped-field .married-status {
+	width: 15%;
 }
 
 label {

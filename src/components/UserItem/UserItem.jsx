@@ -1,8 +1,9 @@
 import { Fragment } from "react";
 import { capitalizeWord, renderField } from "../../utils/formatter";
 import './UserItem.css';
+import Button from "../Button/Button";
 
-function UserItem( { data, onChangeField, onBlurName } ) {
+function UserItem( { data, onChangeField, onBlurName, onDeleteAction } ) {
 	const orderedField = [
 		'email', 'phone', 'username', 'website', 'company', 'address'
 	];
@@ -34,6 +35,8 @@ function UserItem( { data, onChangeField, onBlurName } ) {
 						onChange={ e => onChangeField( data.id, e.target.checked, 'married' ) }
 					/>
 				</div>
+
+				<Button userId={data.id} onDeleteAction={onDeleteAction} />
 			</div>
 
 			<dl className="user-details">

@@ -61,7 +61,7 @@ function renderField( value, field ) {
  * @param {any} message
  * @param {string} type
  */
-function printMessageConsole( message, type ) {
+function printMessageConsole( message, type = 'log' ) {
 	let styles = ['font-size: 20px'];
 	const color = 'error' == type ? 'color: #F50022' : 'color: #32a852';
 	styles.push(color);
