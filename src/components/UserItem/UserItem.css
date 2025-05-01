@@ -1,0 +1,124 @@
+.user-item {
+	border-color: #bf00f6;
+	border-style: solid;
+	border-width: 0 0 1px;
+	padding: 10px 20px;
+}
+
+.user-item summary {
+	font-size: 20px;
+}
+
+.grouped-field {
+	align-self: center;
+	display: flex;
+	padding-top: 10px;
+}
+
+.grouped-field div {
+	width: 30%;
+}
+
+.grouped-field .user-name {
+	margin-right: min(5%, 40px);
+}
+
+label {
+	margin-right: 15px;
+	font-style: italic;
+	font-weight: 600;
+}
+
+.user-name input {
+	border: 1px solid;
+	border-radius: 5px;
+	font-size: 14px;
+	padding: 10px 15px;
+	width: 80%;
+}
+
+.user-name input:focus {
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.47);
+	outline: none;
+}
+
+.married-status {
+	align-self: center;
+}
+
+.married-status label {
+	position: relative;
+}
+
+.married-status label::before {
+	border: 1px solid #000000;
+	border-radius: 15px;
+	content: '';
+	display: block;
+	height: 20px;
+	left: 77px;
+	position: absolute;
+	top: -2px;
+	transition: background-color 0.5s ease;
+	width: 40px;
+}
+
+.married-status label::after {
+	background-color: #000;
+	border-radius: 50%;
+	content: '';
+	display: inline-block;
+	height: 18px;
+	left: 80px;
+	/* 102px - for checked, 79px - not checked */
+	position: absolute;
+	top: 0;
+	transition: left .5s ease, background-color .5s ease;
+	width: 18px;
+}
+
+.married-status:has(input) label::before {
+	left: 77px;
+}
+
+.married-status:has(input:checked) label::after {
+	background-color: #ffffff;
+	left: 98px;
+}
+
+.married-status:has(input:checked) label::before {
+	background-color: rgba(0, 0, 0, .7);
+}
+
+.married-status input {
+	display: none;
+}
+
+.grouped-field + dl {
+	border-top: 2px solid #e7d4a3;
+	padding-top: 16px;
+}
+
+.user-details {
+	columns: 2 100px;
+	column-gap: 30px;
+	max-width: 800px;
+}
+
+.address .nested-info {
+	column-count: 2;
+}
+
+.user-details dt {
+	font-style: italic;
+	font-weight: 600;
+	padding-bottom: 3px;
+}
+
+.user-details dt:not(:first-child) {
+	margin-top: 15px;
+}
+
+.user-details dd {
+	margin-left: 20px;
+}

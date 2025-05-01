@@ -1,6 +1,8 @@
+import UsersList from "./components/UserList/UsersList";
+
 function App() {
 
-  return <h1>App Component</h1>
+  return <UsersList />
 }
 
 export default App;
