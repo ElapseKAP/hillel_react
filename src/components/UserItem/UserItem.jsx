@@ -31,7 +31,7 @@ function UserItem( { data, onChangeField, onBlurName, onDeleteAction } ) {
 						id={`marriedStatus-${data.id}`}
 						name="married"
 						value={data.married}
-						checked={data.married}
+						defaultChecked={data.married}
 						onChange={ e => onChangeField( data.id, e.target.checked, 'married' ) }
 					/>
 				</div>
