@@ -85,8 +85,24 @@ button:disabled {
 }
 
 .tasks-wrapper .task-list {
+  counter-reset: tasklist-counter;
   font-size: 16px;
   padding-left: 20px;
+}
+
+.task-list li {
+  counter-increment: tasklist-counter;
+  list-style: none;
+  position: relative;
+}
+
+.task-list li::before {
+  color: #337AB7;
+  content: counter(tasklist-counter, decimal-leading-zero) '';
+  font-family: sans-serif;
+  font-size: 15px;
+  left: -22px;
+  position: absolute;
 }
 
 .task-list li:not(:first-child) {
