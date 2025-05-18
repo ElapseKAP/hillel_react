@@ -61,9 +61,10 @@ function App() {
     setNewTask((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  const handleSubmitCreateTask = (e) => {
+  const handleSubmitCreateTask = async (e) => {
     e.preventDefault();
-    services.post("tasks", newTask);
+    await services.post("tasks", newTask);
+    await fetchData();
     setNewTask({ title: "", status: "" });
   };
 
@@ -92,6 +93,8 @@ function App() {
     const taskId = e.target.getAttribute("data-id");
 
     if (typeof +status == "number" && typeof +taskId == "number") {
+      services.put(`tasks/${taskId}`, +status);
+
       let data = updateTaskList(+status, +taskId, taskList);
       setTaskList(data);
     }
@@ -104,10 +107,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem("statusMap", JSON.stringify(statusMap));
   }, [statusMap]);
-
-  useEffect(() => {
-    fetchData();
-  }, [newTask]);
 
   return (
     <div className="task-manager-section">
@@ -208,19 +207,22 @@ function App() {
       {taskList && (
         <div className="tasks-wrapper" style={{ "--columns": `${Object.keys(taskList).length}` }}>
           {Object.keys(taskList).map((status) => (
-            <ul key={status} className={`task-list status-${status}`}>
-              {taskList[status].map((task) => (
-                <li key={task.id}>
-                  <strong>{task.title}</strong>
-                  <Buttons
-                    taskStatus={task.status}
-                    taskId={task.id}
-                    statusMap={statusMap}
-                    onBtnClick={handleBtnClick}
-                  />
-                </li>
-              ))}
-            </ul>
+            <div className="column">
+              <h2>{statusMap[status]?.name}</h2>
+              <ul key={status} className={`task-list status-${status}`}>
+                {taskList[status].map((task) => (
+                  <li key={task.id}>
+                    <strong>{task.title}</strong>
+                    <Buttons
+                      taskStatus={task.status}
+                      taskId={task.id}
+                      statusMap={statusMap}
+                      onBtnClick={handleBtnClick}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
       )}

@@ -9,6 +9,22 @@ h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+button {
+  background-color: #60c0de;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 7px 12px;
+}
+
+button:disabled {
+  background-color: rgb(96, 192, 222, .5);
+  cursor: not-allowed;
+}
+
 .task-manager-section {
   display: flex;
   flex-wrap: wrap;
@@ -20,16 +36,87 @@ h2, h3, h4, h5, h6 {
 
 [class*="form-wrapper"] {
   border: 1px dashed #000000;
+  box-sizing: border-box;
+  padding: 15px;
   width: 30%;
+}
+
+[class*="form-wrapper"] label {
+  display: block;
+  margin-bottom: 3px;
+}
+
+[class*="form-wrapper"] .text-field,
+[class*="form-wrapper"] .select-field {
+  margin-top: 10px;
+}
+
+[class*="form-wrapper"] .btn-wrapper {
+  margin-top: 20px;
 }
 
 .tasks-wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 40px 15px 0;
   width: 100%;
 }
 
-.task-list {
+.tasks-wrapper .column {
+  position: relative;
   width: calc( ( 100% - (var(--columns) * 15px) ) / var(--columns) );
+}
+
+.tasks-wrapper .column:not(:first-child)::before {
+  background-color: #ff4500;
+  content: '';
+  display: block;
+  height: calc(100% - 50px);
+  left: -11px;
+  position: absolute;
+  top: 15px;
+  width: 2px;
+}
+
+.column h2 {
+  color: #aba5a5;
+  font-style: italic;
+  text-align: center;
+}
+
+.tasks-wrapper .task-list {
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+.task-list li:not(:first-child) {
+  border-top: 2px solid #eeeeee;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.buttons-wrap {
+  padding-top: 5px;
+}
+
+.buttons-wrap button {
+  font-weight: 400;
+  margin-right: 10px;
+  padding: 5px 12px;
+}
+
+.buttons-wrap button:nth-child(n+3) {
+  background-color: #A37CD9;
+}
+
+.btn-to-do {
+  background-color: #337AB7;
+}
+
+.btn-in-progress {
+  background-color: #F0AD4E;
+}
+
+.btn-done {
+  background-color: #69B95C;
 }
