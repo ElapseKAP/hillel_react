@@ -1,0 +1,143 @@
+:root {
+  --modal-bg: #fff;
+  --overlay-bg: rgba(0, 0, 0, 0.6);
+  --primary-color: #ffd73b;
+  --secondary-color: #262626;
+  --text-color: #333;
+  --border-color: #ddd;
+  --button-secondary-bg: #f1f1f1;
+  --button-secondary-color: #333;
+}
+
+.modal-window {
+  position: fixed;
+  inset: 0;
+  background: var(--overlay-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: var(--modal-bg);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-head {
+  padding: 20px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.modal-head .title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.content {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+form.create-recipe-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+form.create-recipe-form input[type="text"],
+form.edit-recipe-form input[type="text"],
+form.create-recipe-form input[type="number"],
+form.edit-recipe-form input[type="number"],
+form.create-recipe-form textarea,
+form.edit-recipe-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+form.create-recipe-form textarea,
+form.edit-recipe-form textarea {
+  resize: none;
+}
+
+.grouped-field {
+  display: flex;
+  column-gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.grouped-field > div {
+  flex: 1 1 calc(33.333% - 10px);
+}
+
+@media (max-width: 600px) {
+  .grouped-field {
+    flex-direction: column;
+  }
+
+  .grouped-field > div {
+    flex: 1 1 100%;
+  }
+}
+
+.btn-wrap {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-wrap button {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-wrap button[type="submit"] {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.btn-wrap button[type="submit"]:hover {
+  background: #ffc107;
+}
+
+.btn-wrap button:not([type="submit"]) {
+  background: var(--button-secondary-bg);
+  color: var(--button-secondary-color);
+}
+
+.btn-wrap button:not([type="submit"]):hover {
+  background: #e1e1e1;
+}
+
+.content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}

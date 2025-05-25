@@ -1,0 +1,16 @@
+.list-row .btn {
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+.list-row .btn-edit,
+.confirm-delete-modal .btn-delete {
+  background-color: var(--primary-color);
+  margin-right: 12px;
+}
+
+.list-row .btn-edit:hover,
+.confirm-delete-modal .btn-delete:hover {
+  background-color: #ffc107;
+  border-color: #ffc107;
+}

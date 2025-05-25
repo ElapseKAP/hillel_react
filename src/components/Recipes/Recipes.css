@@ -1,0 +1,20 @@
+.list {
+  margin: 0 auto;
+  padding-left: 10px;
+  width: clamp(768px, 50%, 992px);
+}
+
+.list .list-row {
+  align-items: center;
+  border-bottom: 2px solid #f1ecec;
+  display: flex;
+  padding: 15px 15px 15px 0;
+}
+
+.list-row img {
+  margin-right: 20px;
+}
+
+.list-row .buttons-wrapper {
+  margin-left: auto;
+}
