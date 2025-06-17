@@ -1,0 +1,39 @@
+.flights-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.flight-item {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  color: #1c1c1c;
+}
+
+.flight-item h3 {
+  margin: 0 0 0.5rem 0;
+  color: #000;
+}
+
+.flight-item span {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.flight-item button {
+  background: #ffd73b;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.flight-item button:hover {
+  background: #ffc300;
+  transform: translateY(-1px);
+}

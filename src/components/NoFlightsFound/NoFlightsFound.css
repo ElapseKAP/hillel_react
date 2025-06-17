@@ -1,0 +1,25 @@
+.no-flights {
+  text-align: center;
+  margin-top: 2rem;
+  color: #333;
+}
+
+.no-flights p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.reset-button {
+  background: #ffd73b;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.reset-button:hover {
+  background: #ffc300;
+  transform: translateY(-1px);
+}

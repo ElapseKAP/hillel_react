@@ -1,0 +1,50 @@
+.booking-confirmation-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd73b, #fff7c2);
+}
+
+.confirmation-card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+}
+
+.emoji {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.confirmation-card h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #1c1c1c;
+}
+
+.confirmation-card p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background: #ffd73b;
+  color: #000;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.back-button:hover {
+  background: #ffc300;
+  transform: translateY(-2px);
+}

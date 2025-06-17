@@ -1,0 +1,160 @@
+.flights-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: "Inter", sans-serif;
+  color: #1c1c1c;
+}
+
+.flights-page h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #1c1c1c;
+}
+
+/* Search flight form */
+.search-form {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.flights-page .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.form-group label {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.form-group input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fdfdfd;
+  min-width: 180px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #ffd73b;
+  box-shadow: 0 0 0 2px rgba(255, 215, 59, 0.3);
+}
+
+.flights-page button[type="submit"] {
+  background: #ffd73b;
+  color: #000;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  width: auto;
+}
+
+button[type="submit"]:hover {
+  background: #ffc300;
+  transform: translateY(-1px);
+}
+
+/* Список рейсів */
+
+.flights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.flight-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.flight-item h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #1c1c1c;
+}
+
+.flight-item span {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.flight-item button {
+  align-self: flex-start;
+  background: #ffd73b;
+  color: #000;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.flight-item button:hover {
+  background: #ffc300;
+  transform: translateY(-1px);
+}
+
+/* Помилки */
+
+.error {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.book-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #ffd73b;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.book-link:hover {
+  background: #ffc300;
+  transform: translateY(-1px);
+}
+
+.reset-button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-left: 1rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.reset-button:hover {
+  background: #555;
+  transform: translateY(-1px);
+}

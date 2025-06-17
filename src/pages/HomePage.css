@@ -1,0 +1,51 @@
+.home-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffd73b, #fff7c2);
+}
+
+.welcome-card {
+  background: #fff;
+  padding: 3rem;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  max-width: 460px;
+}
+
+.emoji {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.welcome-card h1 {
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  color: #1c1c1c;
+}
+
+.welcome-card p {
+  font-size: 1.15rem;
+  color: #333;
+  margin-bottom: 1.8rem;
+}
+
+.start-button {
+  display: inline-block;
+  padding: 0.85rem 1.6rem;
+  background: #ffd73b;
+  color: #000;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  font-size: 1.05rem;
+}
+
+.start-button:hover {
+  background: #ffc300;
+  transform: translateY(-2px);
+}

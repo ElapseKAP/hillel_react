@@ -1,0 +1,18 @@
+.flight-details-page {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.booking-form {
+  margin: 50px 0 0;
+  width: 50%;
+}
+
+.booking-form .checkbox input {
+  min-width: auto;
+  width: 20px;
+}
+
+.booking-form button {
+  width: auto;
+}
